@@ -1,8 +1,8 @@
 TomsAhaList::Application.routes.draw do
-  resources :users
-   get 'sessions/create', :controller => "sessions", :action => "create"
-   get 'sessions/new', :controller => "sessions", :action => "new"
-   get 'sessions/destroy', :controller => "sessions", :action => "destroy"
+  resources :users   
+  get 'sessions/new', :controller => "sessions", :action => "new"
+  post 'sessions/create', :controller => "sessions", :action => "create"
+  get 'sessions/destroy', :controller => "sessions", :action => "destroy"
   
   root :to => 'users#index'
   
