@@ -1,7 +1,12 @@
 TomsAhaList::Application.routes.draw do
   resources :users
+   get 'sessions/create', :controller => "sessions", :action => "create"
+   get 'sessions/new', :controller => "sessions", :action => "new"
+   get 'sessions/destroy', :controller => "sessions", :action => "destroy"
   
   root :to => 'users#index'
+  
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

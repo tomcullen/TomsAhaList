@@ -1,0 +1,7 @@
+new session
+
+<%= form_tag sessions_create_url do %>
+<p>Email: <%= text_field_tag "email" %></p>
+<p>password: <%= text_field_tag "password" %></p>
+<%= submit_tag "Sign In" %>
+<% end %>
